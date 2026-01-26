@@ -13,7 +13,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://ragbackend-seven.vercel.app/';
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'https://ragbackend-keli.onrender.com';
 
   const handleSubmit = async () => {
     if (!query.trim()) {
