@@ -34,13 +34,11 @@ export default function Home() {
         top_k: topK,           // frontend topK used for display limit
       };
 
-  const res = await fetch(`${BACKEND_URL}/rag/debug`, {
-  method: 'POST',
-  mode: 'cors',
-  credentials: 'include',          // ← Add this line
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ ...payload, generate: true }),
-});
+      const res = await fetch(`${BACKEND_URL}/rag/debug`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...payload, generate: true }),
+      });
 
       if (!res.ok) {
         const errText = await res.text();
