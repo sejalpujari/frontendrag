@@ -100,7 +100,7 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
                 {[
-                  { label: 'Chunk Size', value: chunkSize, set: setChunkSize, min: 50, max: 800, step: 10 },
+                  { label: 'Chunk Size', value: chunkSize, set: setChunkSize, min: 0, max: 800, step: 10 },
                   { label: 'Chunk Overlap', value: chunkOverlap, set: setChunkOverlap, min: 0, max: 300, step: 5 },
                   { label: 'Display Top K', value: topK, set: setTopK, min: 1, max: 12, step: 1 },
                 ].map(({ label, value, set, min, max, step }) => (
